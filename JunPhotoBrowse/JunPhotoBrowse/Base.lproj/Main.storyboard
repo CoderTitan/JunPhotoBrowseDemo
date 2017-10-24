@@ -18,8 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-4H-9Wi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Xkk-ht-mCh" customClass="HomeCollectionViewLayout" customModule="JunPhotoBrowse" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="ws6-LJ-B2G" customClass="ImageCollectionViewCell" customModule="JunPhotoBrowse" customModuleProvider="target">
@@ -56,7 +57,7 @@
                             <constraint firstItem="nPC-4H-9Wi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CBC-mc-EMV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nPC-4H-9Wi" secondAttribute="trailing" id="UxW-4X-bWT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nPC-4H-9Wi" secondAttribute="bottom" id="yK2-9S-Gzh"/>
-                            <constraint firstItem="nPC-4H-9Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zes-FH-Gcj"/>
+                            <constraint firstItem="nPC-4H-9Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zes-FH-Gcj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

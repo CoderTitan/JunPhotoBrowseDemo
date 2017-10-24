@@ -18,14 +18,15 @@ class HomeCollectionViewLayout: UICollectionViewFlowLayout {
         let col: CGFloat = 3
         
         //2. 计算宽高
-        let itemWH = (kScreenWidth - (col + 1) * margin) / 3
+        let itemW = (kScreenWidth - (col + 1) * margin) / 3
+        let itemH = itemW / 510 * 740
         
         //3. 设置布局
-        itemSize = CGSize(width: itemWH, height: itemWH)
+        itemSize = CGSize(width: itemW, height: itemH)
         minimumLineSpacing = margin
         minimumInteritemSpacing = margin
         
-        //4. 设置内边距
-        collectionView?.contentInset = UIEdgeInsets(top: margin, left: margin, bottom: 0, right: margin)
+        // 设置内边距(在此处设置内边距会与刷新功能冲突, 可选用代理方法实现)
+//        collectionView?.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
 }

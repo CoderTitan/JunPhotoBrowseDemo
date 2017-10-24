@@ -17,25 +17,57 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadFirstPageData()
+        title = "图片列表"
+        
+        //添加刷新控件
+        imageCollection.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadFirstPageData))
+        imageCollection.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
+        imageCollection.mj_header.beginRefreshing()
+        imageCollection.mj_footer.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
 }
 
 //MARK: 数据加载
 extension MainViewController {
-    fileprivate func loadFirstPageData(){
+    //下拉刷新
+    @objc fileprivate func loadFirstPageData(){
         page = 0
+        if imageCollection.mj_footer.isRefreshing {
+            imageCollection.mj_footer.endRefreshing()
+        }
         imageVM.loadImageDatas(page: 0) {
+            self.imageCollection.mj_footer.isHidden = self.imageVM.imageArray.count == 0
             self.imageCollection.reloadData()
+            self.imageCollection.mj_header.endRefreshing()
+        }
+    }
+    
+    //上啦加载
+    @objc fileprivate func loadMoreData(){
+        page += 1
+        if imageCollection.mj_header.isRefreshing {
+            imageCollection.mj_header.endRefreshing()
+        }
+        imageVM.loadImageDatas(page: page) {
+            if self.imageVM.dataCount < 30 {
+                self.imageCollection.mj_footer.endRefreshingWithNoMoreData()
+            }else{
+                self.imageCollection.mj_footer.resetNoMoreData()
+            }
+            self.imageCollection.reloadData()
+            self.imageCollection.mj_footer.endRefreshing()
         }
     }
 }
 
 
 //MARK: collection代理
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageVM.imageArray.count
     }
@@ -51,4 +83,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    
 }
