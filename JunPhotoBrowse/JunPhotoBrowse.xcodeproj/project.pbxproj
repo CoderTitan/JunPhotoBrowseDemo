@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47B00AAF1F9F0283007D505A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00AAE1F9F0283007D505A /* AppDelegate.swift */; };
+		47B00AB41F9F0283007D505A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B00AB21F9F0283007D505A /* Main.storyboard */; };
+		47B00AB61F9F0283007D505A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B00AB51F9F0283007D505A /* Assets.xcassets */; };
+		47B00AB91F9F0283007D505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B00AB71F9F0283007D505A /* LaunchScreen.storyboard */; };
+		47B00AD11F9F0484007D505A /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ACC1F9F0484007D505A /* BrowseViewController.swift */; };
+		47B00AD31F9F0499007D505A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00AD21F9F0499007D505A /* MainViewController.swift */; };
+		47B00AD51F9F0588007D505A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00AD41F9F0588007D505A /* UIExtension.swift */; };
+		47B00AD71F9F0653007D505A /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00AD61F9F0653007D505A /* HomeCollectionViewLayout.swift */; };
+		47B00AD91F9F10EA007D505A /* JunNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00AD81F9F10EA007D505A /* JunNetworkTool.swift */; };
+		47B00ADB1F9F1377007D505A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADA1F9F1377007D505A /* ImageModel.swift */; };
+		47B00ADD1F9F1537007D505A /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADC1F9F1537007D505A /* ImageViewModel.swift */; };
+		47B00ADF1F9F1A79007D505A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADE1F9F1A79007D505A /* ImageCollectionViewCell.swift */; };
+		C5DB8069F5FD8B105A7370F7 /* Pods_JunPhotoBrowse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D87A9DAE23AE4A422607CC /* Pods_JunPhotoBrowse.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		47B00AAB1F9F0283007D505A /* JunPhotoBrowse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JunPhotoBrowse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B00AAE1F9F0283007D505A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47B00AB31F9F0283007D505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47B00AB51F9F0283007D505A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47B00AB81F9F0283007D505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47B00ABA1F9F0283007D505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B00ACC1F9F0484007D505A /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		47B00AD21F9F0499007D505A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		47B00AD41F9F0588007D505A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		47B00AD61F9F0653007D505A /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
+		47B00AD81F9F10EA007D505A /* JunNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunNetworkTool.swift; sourceTree = "<group>"; };
+		47B00ADA1F9F1377007D505A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		47B00ADC1F9F1537007D505A /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		47B00ADE1F9F1A79007D505A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		73400224A07ED60FBA82FC54 /* Pods-JunPhotoBrowse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JunPhotoBrowse.release.xcconfig"; path = "Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse.release.xcconfig"; sourceTree = "<group>"; };
+		AA94F1EE682DDFBCBDC9502D /* Pods-JunPhotoBrowse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JunPhotoBrowse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse.debug.xcconfig"; sourceTree = "<group>"; };
+		D1D87A9DAE23AE4A422607CC /* Pods_JunPhotoBrowse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JunPhotoBrowse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47B00AA81F9F0283007D505A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5DB8069F5FD8B105A7370F7 /* Pods_JunPhotoBrowse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47B00AA21F9F0283007D505A = {
+			isa = PBXGroup;
+			children = (
+				47B00AAD1F9F0283007D505A /* JunPhotoBrowse */,
+				47B00AAC1F9F0283007D505A /* Products */,
+				794BE43113C1EF321F494619 /* Pods */,
+				B1CB5A8643FEDA2F6D19EF2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		47B00AAC1F9F0283007D505A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47B00AAB1F9F0283007D505A /* JunPhotoBrowse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47B00AAD1F9F0283007D505A /* JunPhotoBrowse */ = {
+			isa = PBXGroup;
+			children = (
+				47B00AC81F9F0484007D505A /* Classes */,
+				47B00AAE1F9F0283007D505A /* AppDelegate.swift */,
+				47B00AB21F9F0283007D505A /* Main.storyboard */,
+				47B00AB51F9F0283007D505A /* Assets.xcassets */,
+				47B00AB71F9F0283007D505A /* LaunchScreen.storyboard */,
+				47B00ABA1F9F0283007D505A /* Info.plist */,
+			);
+			path = JunPhotoBrowse;
+			sourceTree = "<group>";
+		};
+		47B00AC81F9F0484007D505A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47B00AC91F9F0484007D505A /* 主界面 */,
+				47B00ACA1F9F0484007D505A /* 图片浏览器 */,
+				47B00AD01F9F0484007D505A /* 工具类 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		47B00AC91F9F0484007D505A /* 主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				47B00AD21F9F0499007D505A /* MainViewController.swift */,
+				47B00ADA1F9F1377007D505A /* ImageModel.swift */,
+				47B00ADC1F9F1537007D505A /* ImageViewModel.swift */,
+				47B00ADE1F9F1A79007D505A /* ImageCollectionViewCell.swift */,
+			);
+			path = "主界面";
+			sourceTree = "<group>";
+		};
+		47B00ACA1F9F0484007D505A /* 图片浏览器 */ = {
+			isa = PBXGroup;
+			children = (
+				47B00ACB1F9F0484007D505A /* BrowserController */,
+				47B00ACD1F9F0484007D505A /* Model */,
+				47B00ACE1F9F0484007D505A /* ViewModel */,
+				47B00ACF1F9F0484007D505A /* Views */,
+			);
+			path = "图片浏览器";
+			sourceTree = "<group>";
+		};
+		47B00ACB1F9F0484007D505A /* BrowserController */ = {
+			isa = PBXGroup;
+			children = (
+				47B00ACC1F9F0484007D505A /* BrowseViewController.swift */,
+			);
+			path = BrowserController;
+			sourceTree = "<group>";
+		};
+		47B00ACD1F9F0484007D505A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47B00ACE1F9F0484007D505A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		47B00ACF1F9F0484007D505A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47B00AD01F9F0484007D505A /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				47B00AD41F9F0588007D505A /* UIExtension.swift */,
+				47B00AD81F9F10EA007D505A /* JunNetworkTool.swift */,
+				47B00AD61F9F0653007D505A /* HomeCollectionViewLayout.swift */,
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
+		794BE43113C1EF321F494619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA94F1EE682DDFBCBDC9502D /* Pods-JunPhotoBrowse.debug.xcconfig */,
+				73400224A07ED60FBA82FC54 /* Pods-JunPhotoBrowse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1CB5A8643FEDA2F6D19EF2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1D87A9DAE23AE4A422607CC /* Pods_JunPhotoBrowse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47B00AAA1F9F0283007D505A /* JunPhotoBrowse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B00ABD1F9F0283007D505A /* Build configuration list for PBXNativeTarget "JunPhotoBrowse" */;
+			buildPhases = (
+				66B3E41FDC478F235B84081F /* [CP] Check Pods Manifest.lock */,
+				47B00AA71F9F0283007D505A /* Sources */,
+				47B00AA81F9F0283007D505A /* Frameworks */,
+				47B00AA91F9F0283007D505A /* Resources */,
+				F4EE0615CBCFA8F9E5AA5E54 /* [CP] Embed Pods Frameworks */,
+				8DF52ADB68175A53C8D27A84 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JunPhotoBrowse;
+			productName = JunPhotoBrowse;
+			productReference = 47B00AAB1F9F0283007D505A /* JunPhotoBrowse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47B00AA31F9F0283007D505A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = CoderJun;
+				TargetAttributes = {
+					47B00AAA1F9F0283007D505A = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 47B00AA61F9F0283007D505A /* Build configuration list for PBXProject "JunPhotoBrowse" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47B00AA21F9F0283007D505A;
+			productRefGroup = 47B00AAC1F9F0283007D505A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47B00AAA1F9F0283007D505A /* JunPhotoBrowse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47B00AA91F9F0283007D505A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B00AB91F9F0283007D505A /* LaunchScreen.storyboard in Resources */,
+				47B00AB61F9F0283007D505A /* Assets.xcassets in Resources */,
+				47B00AB41F9F0283007D505A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66B3E41FDC478F235B84081F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JunPhotoBrowse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DF52ADB68175A53C8D27A84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4EE0615CBCFA8F9E5AA5E54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47B00AA71F9F0283007D505A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B00AD91F9F10EA007D505A /* JunNetworkTool.swift in Sources */,
+				47B00AD11F9F0484007D505A /* BrowseViewController.swift in Sources */,
+				47B00AD71F9F0653007D505A /* HomeCollectionViewLayout.swift in Sources */,
+				47B00AAF1F9F0283007D505A /* AppDelegate.swift in Sources */,
+				47B00AD31F9F0499007D505A /* MainViewController.swift in Sources */,
+				47B00AD51F9F0588007D505A /* UIExtension.swift in Sources */,
+				47B00ADF1F9F1A79007D505A /* ImageCollectionViewCell.swift in Sources */,
+				47B00ADD1F9F1537007D505A /* ImageViewModel.swift in Sources */,
+				47B00ADB1F9F1377007D505A /* ImageModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47B00AB21F9F0283007D505A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B00AB31F9F0283007D505A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47B00AB71F9F0283007D505A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B00AB81F9F0283007D505A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47B00ABB1F9F0283007D505A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47B00ABC1F9F0283007D505A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47B00ABE1F9F0283007D505A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA94F1EE682DDFBCBDC9502D /* Pods-JunPhotoBrowse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JunPhotoBrowse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.JunPhotoBrowse";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47B00ABF1F9F0283007D505A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73400224A07ED60FBA82FC54 /* Pods-JunPhotoBrowse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JunPhotoBrowse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.JunPhotoBrowse";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47B00AA61F9F0283007D505A /* Build configuration list for PBXProject "JunPhotoBrowse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B00ABB1F9F0283007D505A /* Debug */,
+				47B00ABC1F9F0283007D505A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B00ABD1F9F0283007D505A /* Build configuration list for PBXNativeTarget "JunPhotoBrowse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B00ABE1F9F0283007D505A /* Debug */,
+				47B00ABF1F9F0283007D505A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47B00AA31F9F0283007D505A /* Project object */;
+}
