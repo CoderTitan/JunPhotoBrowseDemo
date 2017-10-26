@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class ImageCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    var imageView = UIImageView()
     
     var imageModel: ImageModel? {
         didSet{
@@ -20,4 +20,14 @@ class ImageCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        contentView.addSubview(imageView)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

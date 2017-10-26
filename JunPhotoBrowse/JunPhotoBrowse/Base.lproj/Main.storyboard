@@ -17,54 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-4H-9Wi">
-                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <collectionViewLayout key="collectionViewLayout" id="Xkk-ht-mCh" customClass="HomeCollectionViewLayout" customModule="JunPhotoBrowse" customModuleProvider="target"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="ws6-LJ-B2G" customClass="ImageCollectionViewCell" customModule="JunPhotoBrowse" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-5V-u3i">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="gLf-5V-u3i" secondAttribute="trailing" id="30E-A5-zBV"/>
-                                            <constraint firstAttribute="bottom" secondItem="gLf-5V-u3i" secondAttribute="bottom" id="EeZ-Ha-niP"/>
-                                            <constraint firstItem="gLf-5V-u3i" firstAttribute="top" secondItem="ws6-LJ-B2G" secondAttribute="top" id="UiT-L4-NYb"/>
-                                            <constraint firstItem="gLf-5V-u3i" firstAttribute="leading" secondItem="ws6-LJ-B2G" secondAttribute="leading" id="aZU-rR-cue"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="imageView" destination="gLf-5V-u3i" id="0vl-PY-1uS"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97x-GE-4Kh">
+                                <rect key="frame" x="118" y="128" width="138" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="类似朋友圈图片浏览"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d8L-d9-qHW"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HZo-Gt-ngC"/>
+                                    <action selector="circleOfFriendAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4T-kI-1Vf"/>
                                 </connections>
-                            </collectionView>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiH-rA-TjD">
+                                <rect key="frame" x="125.5" y="236" width="123" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="自定义图片浏览器"/>
+                                <connections>
+                                    <action selector="customeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xZ-CS-9GM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nPC-4H-9Wi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CBC-mc-EMV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nPC-4H-9Wi" secondAttribute="trailing" id="UxW-4X-bWT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nPC-4H-9Wi" secondAttribute="bottom" id="yK2-9S-Gzh"/>
-                            <constraint firstItem="nPC-4H-9Wi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zes-FH-Gcj"/>
+                            <constraint firstItem="97x-GE-4Kh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FuD-BB-tFi"/>
+                            <constraint firstItem="97x-GE-4Kh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="RvV-aN-bbY"/>
+                            <constraint firstItem="HiH-rA-TjD" firstAttribute="top" secondItem="97x-GE-4Kh" secondAttribute="bottom" constant="78" id="bxr-Fv-4OB"/>
+                            <constraint firstItem="HiH-rA-TjD" firstAttribute="centerX" secondItem="97x-GE-4Kh" secondAttribute="centerX" id="cIC-j8-H7F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="MRo-9P-b9B"/>
-                    <connections>
-                        <outlet property="imageCollection" destination="nPC-4H-9Wi" id="aWD-zy-k1y"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
