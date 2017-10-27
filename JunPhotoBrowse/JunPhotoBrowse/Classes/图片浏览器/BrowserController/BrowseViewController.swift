@@ -21,8 +21,6 @@ class BrowseViewController: UIViewController {
     fileprivate var imageArray: [ImageModel]?
     // MARK:- 懒加载子控件
     fileprivate lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: PhotoCollectionViewLayout())
-    fileprivate lazy var closeBtn = UIButton(title: "关闭", bgColor: UIColor.darkGray, fontSize: 14)
-    fileprivate lazy var saveBtn = UIButton(title: "保存", bgColor: UIColor.darkGray, fontSize: 14)
     
     //MARK: 构造方法
     init(images: [ImageModel], currentIndexP: IndexPath) {
@@ -56,21 +54,9 @@ extension BrowseViewController {
     fileprivate func initializationViews(){
         // 1.添加子控件
         view.addSubview(collectionView)
-        view.addSubview(closeBtn)
-        view.addSubview(saveBtn)
         
         // 2.布局子控件
-        let btnHMargin : CGFloat = 20
-        let btnVMargin : CGFloat = 10
-        let btnW : CGFloat = 100
-        let btnH : CGFloat = 32
-        closeBtn.frame = CGRect(x: btnHMargin, y: view.bounds.height - btnH - btnVMargin, width: btnW, height: btnH)
-        saveBtn.frame = CGRect(x: view.bounds.width - PicMargin - btnW - btnHMargin, y: view.bounds.height - btnVMargin - btnH, width: btnW, height: btnH)
         collectionView.frame = view.bounds
-        
-        // 3.监听按钮的点击
-        closeBtn.addTarget(self, action: #selector(closeBtnClick), for: .touchUpInside)
-        saveBtn.addTarget(self, action: #selector(saveBtnClick), for: .touchUpInside)
         
         // 4.准备collectionView的属性
         collectionView.dataSource = self
@@ -78,49 +64,6 @@ extension BrowseViewController {
     }
 }
 
-//MARK: 事件监听
-extension BrowseViewController {
-    @objc fileprivate func closeBtnClick(){
-        dismiss(animated: true, completion: nil)
-    }
-    //保存图片
-    @objc fileprivate func saveBtnClick(){
-        //1. 获取cell
-        guard let cell = collectionView.visibleCells[0] as? BrowseCollectionCell else { return }
-        
-        //2. 取出cell里面的image
-        guard let image = cell.imageView.image else { return }
-        
-        //3. 判断相机权限是否开启
-        let state = PHPhotoLibrary.authorizationStatus()
-        if state == .restricted || state == .denied {
-            let alert = UIAlertController(title: "相册权限已关闭", message: "您未授权相册权限，请在设置中开启权限后执行此操作", preferredStyle: .alert)
-            let action = UIAlertAction(title: "去设置", style: .default, handler: { (alert) in
-                guard let url = URL(string: UIApplicationOpenSettingsURLString) else { return }
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url)
-                }
-                self.dismiss(animated: true, completion: nil)
-            })
-            let cancle = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-            alert.addAction(action)
-            alert.addAction(cancle)
-            present(alert, animated: true, completion: nil)
-        }else{
-            //保存图片到相册中
-            UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
-        }
-    }
-    
-    //保存图片返回值
-    @objc func image(_ image: UIImage, didFinishSavingWithError: NSError?, contextInfo: AnyObject) {
-        if didFinishSavingWithError != nil {
-            SVProgressHUD.showError(withStatus: "图片保存失败")
-        } else {
-            SVProgressHUD.showSuccess(withStatus: "图片保存成功")
-        }
-    }
-}
 
 //MARK: 自定义FlowLayout
 extension BrowseViewController: UICollectionViewDataSource {
@@ -159,7 +102,7 @@ extension BrowseViewController: UICollectionViewDataSource {
 //MARK: PhotoBrowserCellDelegate
 extension BrowseViewController: PhotoBrowserCellDelegate{
     func photoBrowserCellImageClick() {
-        closeBtnClick()
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -182,7 +125,6 @@ extension BrowseViewController: JunBrowserDismissDelegate{
         return collectionView.indexPathsForVisibleItems[0]
     }
 }
-
 
 
 //MARK: 自定义FlowLayout

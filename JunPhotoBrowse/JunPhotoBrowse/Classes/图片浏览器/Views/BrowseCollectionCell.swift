@@ -53,6 +53,7 @@ class BrowseCollectionCell: UICollectionViewCell {
     fileprivate func calculateImageFrame(image: UIImage) {
         let imageH = image.size.height / image.size.width * kScreenWidth
         imageView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: imageH)
+//        imageView.addLongPressSaveImage()
         scrollView.contentSize = CGSize(width: kScreenWidth, height: imageH)
         
         //判断是长图还是短图

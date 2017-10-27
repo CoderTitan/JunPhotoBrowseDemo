@@ -20,6 +20,7 @@
 		47B00ADB1F9F1377007D505A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADA1F9F1377007D505A /* ImageModel.swift */; };
 		47B00ADD1F9F1537007D505A /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADC1F9F1537007D505A /* ImageViewModel.swift */; };
 		47B00ADF1F9F1A79007D505A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B00ADE1F9F1A79007D505A /* ImageCollectionViewCell.swift */; };
+		47FC31F21FA1F2A90029E948 /* JunTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC31F11FA1F2A90029E948 /* JunTransitionView.swift */; };
 		47FE37101FA1874100345DE5 /* JunScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE370E1FA1874100345DE5 /* JunScrollViewController.swift */; };
 		47FE37111FA1874100345DE5 /* JunScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FE370F1FA1874100345DE5 /* JunScrollViewController.xib */; };
 		47FE37131FA187A000345DE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE37121FA187A000345DE5 /* MainViewController.swift */; };
@@ -47,6 +48,7 @@
 		47B00ADA1F9F1377007D505A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		47B00ADC1F9F1537007D505A /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		47B00ADE1F9F1A79007D505A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		47FC31F11FA1F2A90029E948 /* JunTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunTransitionView.swift; sourceTree = "<group>"; };
 		47FE370E1FA1874100345DE5 /* JunScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunScrollViewController.swift; sourceTree = "<group>"; };
 		47FE370F1FA1874100345DE5 /* JunScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JunScrollViewController.xib; sourceTree = "<group>"; };
 		47FE37121FA187A000345DE5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -164,9 +166,18 @@
 			path = "工具类";
 			sourceTree = "<group>";
 		};
+		47FC31F01FA1F2920029E948 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47FC31F11FA1F2A90029E948 /* JunTransitionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47FE37141FA18F9900345DE5 /* 转场动画定义 */ = {
 			isa = PBXGroup;
 			children = (
+				47FC31F01FA1F2920029E948 /* Views */,
 				47FE37151FA18FEF00345DE5 /* TransitionViewController.swift */,
 				47FE37161FA18FEF00345DE5 /* TransitionViewController.xib */,
 				47FE37191FA1908600345DE5 /* JunTranstionPhotoController.swift */,
@@ -335,6 +346,7 @@
 				47B00AD91F9F10EA007D505A /* JunNetworkTool.swift in Sources */,
 				47B00AD11F9F0484007D505A /* BrowseViewController.swift in Sources */,
 				47FE371B1FA1908600345DE5 /* JunTranstionPhotoController.swift in Sources */,
+				47FC31F21FA1F2A90029E948 /* JunTransitionView.swift in Sources */,
 				47B00AD71F9F0653007D505A /* HomeCollectionViewLayout.swift in Sources */,
 				47FE37171FA18FEF00345DE5 /* TransitionViewController.swift in Sources */,
 				47B00AAF1F9F0283007D505A /* AppDelegate.swift in Sources */,

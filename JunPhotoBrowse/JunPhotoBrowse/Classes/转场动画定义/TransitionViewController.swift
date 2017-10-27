@@ -97,15 +97,15 @@ extension TransitionViewController: UICollectionViewDataSource, UICollectionView
 extension TransitionViewController {
     fileprivate func presentPhotoBrowse(indexPath: IndexPath) {
         //1. 创建图片浏览器
-        let photoBrowseVC = BrowseViewController(images: imageVM.imageArray, currentIndexP: indexPath)
+        let transitionVC = JunTranstionPhotoController(images: imageVM.imageArray, currentIndex: indexPath.item)
         //2. 设置弹出样式为自定义
-        photoBrowseVC.modalPresentationStyle = .custom
+        transitionVC.modalPresentationStyle = .custom
         //3. 设置转场动画代理
-        photoBrowseVC.transitioningDelegate = photoAnimation
+        transitionVC.transitioningDelegate = photoAnimation
         //4. 设置broseAnimation的属性
-        photoAnimation.setProperty(indexPath: indexPath, self, photoBrowseVC)
+        photoAnimation.setProperty(indexPath: indexPath, self, transitionVC)
         //5. 弹出图片浏览器
-        present(photoBrowseVC, animated: true, completion: nil)
+        present(transitionVC, animated: true, completion: nil)
     }
 }
 
