@@ -27,7 +27,6 @@
 		47FE37171FA18FEF00345DE5 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE37151FA18FEF00345DE5 /* TransitionViewController.swift */; };
 		47FE37181FA18FEF00345DE5 /* TransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FE37161FA18FEF00345DE5 /* TransitionViewController.xib */; };
 		47FE371B1FA1908600345DE5 /* JunTranstionPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE37191FA1908600345DE5 /* JunTranstionPhotoController.swift */; };
-		47FE371C1FA1908600345DE5 /* JunTranstionPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FE371A1FA1908600345DE5 /* JunTranstionPhotoController.xib */; };
 		47FF6D5C1FA0878F00AFF7B0 /* BrowseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FF6D5B1FA0878F00AFF7B0 /* BrowseCollectionCell.swift */; };
 		C5DB8069F5FD8B105A7370F7 /* Pods_JunPhotoBrowse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D87A9DAE23AE4A422607CC /* Pods_JunPhotoBrowse.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		47FE37151FA18FEF00345DE5 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		47FE37161FA18FEF00345DE5 /* TransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionViewController.xib; sourceTree = "<group>"; };
 		47FE37191FA1908600345DE5 /* JunTranstionPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JunTranstionPhotoController.swift; sourceTree = "<group>"; };
-		47FE371A1FA1908600345DE5 /* JunTranstionPhotoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JunTranstionPhotoController.xib; sourceTree = "<group>"; };
 		47FF6D5B1FA0878F00AFF7B0 /* BrowseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCollectionCell.swift; sourceTree = "<group>"; };
 		73400224A07ED60FBA82FC54 /* Pods-JunPhotoBrowse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JunPhotoBrowse.release.xcconfig"; path = "Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse.release.xcconfig"; sourceTree = "<group>"; };
 		AA94F1EE682DDFBCBDC9502D /* Pods-JunPhotoBrowse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JunPhotoBrowse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JunPhotoBrowse/Pods-JunPhotoBrowse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				47FE37151FA18FEF00345DE5 /* TransitionViewController.swift */,
 				47FE37161FA18FEF00345DE5 /* TransitionViewController.xib */,
 				47FE37191FA1908600345DE5 /* JunTranstionPhotoController.swift */,
-				47FE371A1FA1908600345DE5 /* JunTranstionPhotoController.xib */,
 			);
 			path = "转场动画定义";
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				47FE37111FA1874100345DE5 /* JunScrollViewController.xib in Resources */,
-				47FE371C1FA1908600345DE5 /* JunTranstionPhotoController.xib in Resources */,
 				47B00AB91F9F0283007D505A /* LaunchScreen.storyboard in Resources */,
 				47B00AB61F9F0283007D505A /* Assets.xcassets in Resources */,
 				47FE37181FA18FEF00345DE5 /* TransitionViewController.xib in Resources */,

@@ -42,7 +42,7 @@ class JunTranstionPhotoController: UIViewController {
         
         
         //1. 添加切换效果按钮
-        let typeBtn = UIButton(title: "修改展示效果", bgColor: UIColor.darkGray, fontSize: 14)
+        let typeBtn = UIButton(title: "修改展示效果", bgColor: UIColor.red, fontSize: 14)
         typeBtn.frame = CGRect(x: (kScreenWidth - 100) / 2, y: kScreenHeight - 50, width: 100, height: 30)
         typeBtn.addTarget(self, action: #selector(rightButtonAction), for: .touchUpInside)
         view.addSubview(typeBtn)

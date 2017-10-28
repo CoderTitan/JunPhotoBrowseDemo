@@ -53,7 +53,7 @@ extension PhotoBrowseAnimation: UIViewControllerTransitioningDelegate {
         isPresent = true
         return self
     }
-    
+
     // 该方法是告诉系统,消失动画交给谁来处理
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresent = false
